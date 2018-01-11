@@ -21,9 +21,7 @@
     </properties>
 
     <build>
-
         <finalName>Russian Roulette</finalName>
-
         <plugins>
             <plugin>
                 <groupId>com.zenjava</groupId>

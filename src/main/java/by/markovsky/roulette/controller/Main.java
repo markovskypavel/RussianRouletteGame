@@ -20,8 +20,8 @@ public class Main extends Application {
 
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/roulette.fxml"));
         primaryStage.setTitle("Russian Roulette");
-        primaryStage.setWidth(600);
-        primaryStage.setHeight(600);
+        primaryStage.setWidth(700);
+        primaryStage.setHeight(700);
         primaryStage.setScene(new Scene(root));
         primaryStage.setResizable(false);
         primaryStage.initStyle(StageStyle.UTILITY);

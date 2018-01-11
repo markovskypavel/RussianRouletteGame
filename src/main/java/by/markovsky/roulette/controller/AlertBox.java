@@ -24,10 +24,10 @@ final public class AlertBox {
         window.initModality(Modality.APPLICATION_MODAL);
 
         Label label = new Label(message);
-        Button closeButton = new Button("Закрыть");
+        Button closeButton = new Button("Close");
         closeButton.setOnAction(e -> window.close());
 
-        VBox layout = new VBox(20);
+        VBox layout = new VBox(10);
         layout.getChildren().addAll(label, closeButton);
         layout.setAlignment(Pos.CENTER);
 
