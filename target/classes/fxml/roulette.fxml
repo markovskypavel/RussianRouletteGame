@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="by.markovsky.roulette.controller.RouletteController">
+   <top>
+      <VBox fx:id="scoreBoard" alignment="TOP_CENTER" visible="false" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="SCORE">
+               <font>
+                  <Font name="Arial" size="50.0" />
+               </font>
+            </Label>
+            <Label fx:id="score" text="0">
+               <font>
+                  <Font name="Arial" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </top>
+   <bottom>
+      <JFXButton fx:id="startButton" onAction="#onStartButton" prefWidth="200.0" ripplerFill="#e5ff21" style="-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: lightyellow;" text="START NEW GAME" BorderPane.alignment="CENTER">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </bottom>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+   <left>
+      <ImageView disable="true" fitHeight="500.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@../images/pist.png" />
+         </image>
+         <BorderPane.margin>
+            <Insets bottom="10.0" />
+         </BorderPane.margin>
+      </ImageView>
+   </left>
+   <center>
+      <VBox fx:id="gameBoard" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" visible="false" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton onAction="#onShootButton" prefWidth="150.0" ripplerFill="#5de051" style="-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: green;" text="SHOOT!">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton onAction="#onPassButton" prefWidth="150.0" ripplerFill="#ff3737" style="-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: brown;" text="PASS">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton onAction="#onRollButton" prefWidth="150.0" ripplerFill="#52d5de" style="-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: lightblue;" text="ROLL">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+         <padding>
+            <Insets top="100.0" />
+         </padding>
+      </VBox>
+   </center>
+</BorderPane>
