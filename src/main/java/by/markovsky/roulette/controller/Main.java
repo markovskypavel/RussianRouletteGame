@@ -13,6 +13,7 @@ import javafx.stage.StageStyle;
 public class Main extends Application {
 
     private static Stage mainStage;
+    private static int hints = 0;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -38,5 +39,10 @@ public class Main extends Application {
     public static Stage getStage(){
         return mainStage;
     }
-
+    public static void hintsShown(){
+        ++hints;
+    }
+    public static boolean isHintsShown(){
+        return hints == 0;
+    }
 }

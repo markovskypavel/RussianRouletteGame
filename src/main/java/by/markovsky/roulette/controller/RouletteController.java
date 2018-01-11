@@ -42,7 +42,8 @@ public class RouletteController {
         startButton.setVisible(false);
         rollButton.setVisible(true);
 
-        AlertBox.display("Ready", "A revolver is loaded! Press ROLL to spin a barrel!", 400, 120);
+        if(Main.isHintsShown())
+            AlertBox.display("Ready", "A revolver is loaded! Press ROLL to spin a barrel!", 400, 120);
     }
     public void onShootButton() throws Exception{
         if(revolver.shoot()){
@@ -68,7 +69,10 @@ public class RouletteController {
         shootButton.setVisible(true);
         passButton.setVisible(true);
 
-        AlertBox.display("Shoot or pass", "A barrel has been spinned. Now you are ready to shoot or pass!", 500, 120);
+        if(Main.isHintsShown()){
+            AlertBox.display("Shoot or pass", "A barrel has been spinned. Now you are ready to shoot or pass!", 500, 120);
+            Main.hintsShown();
+        }
     }
 
 }
